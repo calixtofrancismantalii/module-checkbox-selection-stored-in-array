@@ -78,10 +78,10 @@ function myfun(e) {
       cells = 0;
 
     isChecked.forEach((value) => {
-      table += `<td>${value}</td>`;
+      table += `<td>${value} <span onclick="alert('test')" style="font-size: 12px; cursor:pointer;"><i class="fa-solid fa-xmark"></i></span></td>`;
       cells++;
       if (cells % perrow == 0 && cells != isChecked.length) {
-        table += "</tr style='border: solid 1px black'><tr>";
+        table += "<tr></tr>";
       }
     });
     table += "</tr>";

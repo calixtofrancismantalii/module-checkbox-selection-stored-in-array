@@ -155,16 +155,16 @@ body {
       display: block;
 
       tbody {
-        background-color: #efeeee;
+        background-color: white;
         display: flex;
         flex-wrap: wrap;
         height: auto;
         border: 1px solid #ddd;
         padding: 5px;
         tr td {
-          background-color: white;
+          background-color: #efeeee;
           border: 1px solid #ddd;
-          padding: 12px;
+          padding: 5px 12px;
           display: inline-block;
           margin-right: 5px;
           margin-bottom: 5px;
