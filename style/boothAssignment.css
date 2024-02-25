@@ -1,0 +1,149 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+body {
+  width: 100%;
+  background-color: #efeeee;
+}
+
+#form-wrapper {
+  display: flex;
+}
+#form-wrapper .column {
+  width: 50%;
+  padding: 10px;
+  border: solid 1px rgb(242, 238, 238);
+  margin: 10px;
+  background-color: #ffffff;
+}
+#form-wrapper form {
+  padding: 10px;
+  width: 100%;
+}
+#form-wrapper form h2 {
+  margin-bottom: 10px;
+}
+#form-wrapper form div #myInput {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  margin-bottom: 10px; /* Safari/Chrome, other WebKit */ /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+}
+#form-wrapper form div div {
+  display: flex;
+  font-size: 13px;
+}
+#form-wrapper form div div .indicator {
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin: 0px 5px;
+}
+#form-wrapper form div div .indiex {
+  background-color: rgb(175, 119, 119);
+}
+#form-wrapper form div div .indibss {
+  background-color: rgb(131, 119, 175);
+}
+#form-wrapper form div div .indiasb {
+  background-color: rgb(119, 175, 125);
+}
+#form-wrapper form #myTable {
+  display: block;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
+  height: 400px !important;
+  overflow: auto;
+  margin-top: 20px;
+}
+#form-wrapper form #myTable tbody {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#form-wrapper form #myTable tbody tr {
+  line-height: 14px;
+  position: relative;
+  display: block;
+}
+#form-wrapper form #myTable tbody tr td {
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+#form-wrapper form #myTable tbody tr td label {
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+}
+#form-wrapper form #myTable tbody tr td label input[type=checkbox] {
+  display: inline-block;
+}
+#form-wrapper form #myTable tbody tr td label .indicator {
+  width: 13px;
+  height: 13px;
+  right: 10px;
+  position: absolute;
+}
+#form-wrapper form #myTable tbody tr td label .indiex {
+  background-color: rgb(175, 119, 119);
+}
+#form-wrapper form #myTable tbody tr td label .indibss {
+  background-color: rgb(131, 119, 175);
+}
+#form-wrapper form #myTable tbody tr td label .indiasb {
+  background-color: rgb(119, 175, 125);
+}
+#form-wrapper form #myTable tbody tr {
+  display: none;
+  /*Hide rows by default*/
+}
+#form-wrapper form #myTable tbody tr.visible {
+  display: table-row;
+  display: block;
+  /* Show them when they match */
+}
+#form-wrapper form #myTable td {
+  text-align: left;
+  display: block;
+}
+#form-wrapper form #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+#form-wrapper form #myTable tbody {
+  height: 10px !important;
+}
+#form-wrapper form {
+  padding: 10px;
+}
+#form-wrapper form #selectedDataTable {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
+  display: block;
+}
+#form-wrapper form #selectedDataTable tbody {
+  background-color: #efeeee;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+#form-wrapper form #selectedDataTable tbody tr td {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 12px;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}/*# sourceMappingURL=boothAssignment.css.map */

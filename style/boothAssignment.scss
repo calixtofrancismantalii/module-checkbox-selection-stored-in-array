@@ -1,0 +1,175 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+body {
+  width: 100%;
+  background-color: #efeeee;
+}
+
+#form-wrapper {
+  display: flex;
+
+  .column {
+    width: 50%;
+    padding: 10px;
+    border: solid 1px rgb(242, 238, 238);
+    margin: 10px;
+    background-color: #ffffff;
+  }
+
+  form {
+    padding: 10px;
+    width: 100%;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    //seacrh exhitbitors
+    div {
+      #myInput {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        margin-bottom: 10px;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box; /* Firefox, other Gecko */
+        box-sizing: border-box; /* Opera/IE 8+ */
+      }
+      div {
+        display: flex;
+        font-size: 13px;
+
+        .indicator {
+          width: 13px;
+          height: 13px;
+          display: inline-block;
+          margin: 0px 5px;
+        }
+        .indiex {
+          background-color: rgb(175, 119, 119);
+        }
+        .indibss {
+          background-color: rgb(131, 119, 175);
+        }
+        .indiasb {
+          background-color: rgb(119, 175, 125);
+        }
+      }
+    }
+
+    #myTable {
+      display: block;
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 18px;
+      height: 400px !important;
+      overflow: auto;
+      margin-top: 20px;
+      // background-color: rgb(175, 119, 119);
+
+      tbody {
+        width: 100%;
+        height: auto;
+        display: block;
+
+        tr {
+          line-height: 14px;
+          position: relative;
+          display: block;
+
+          td {
+            display: block;
+            border-bottom: 1px solid #ddd;
+            label {
+              display: block;
+              padding: 15px;
+              cursor: pointer;
+
+              input[type="checkbox"] {
+                display: inline-block;
+              }
+
+              .indicator {
+                width: 13px;
+                height: 13px;
+                right: 10px;
+                position: absolute;
+              }
+              .indiex {
+                background-color: rgb(175, 119, 119);
+              }
+              .indibss {
+                background-color: rgb(131, 119, 175);
+              }
+              .indiasb {
+                background-color: rgb(119, 175, 125);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #myTable tbody tr {
+      display: none;
+      /*Hide rows by default*/
+    }
+
+    #myTable tbody tr.visible {
+      display: table-row;
+      display: block;
+      /* Show them when they match */
+    }
+
+    #myTable td {
+      text-align: left;
+      display: block;
+    }
+
+    #myTable tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    #myTable tbody {
+      height: 10px !important;
+    }
+    //table of selected exhibitors
+  }
+
+  form {
+    padding: 10px;
+
+    #selectedDataTable {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 18px;
+      display: block;
+
+      tbody {
+        background-color: #efeeee;
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        border: 1px solid #ddd;
+        padding: 5px;
+        tr td {
+          background-color: white;
+          border: 1px solid #ddd;
+          padding: 12px;
+          display: inline-block;
+          margin-right: 5px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style/boothAssignment.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="form-wrapper">
+
+            <div class="column">
+                <form>
+                    <h2>Exhibitor</h2>
+                    <div>
+                        <input type="text" id="myInput" placeholder="Search for Exhibitor" /><br>
+                        <div>
+                            <span class="indicator indiex"></span> <label>Exhibitor</label>
+                            <span class="indicator indiasb"></span> <label>Existing Exhibitor</label>
+                            <span class="indicator indibss"></span> <label>Business Solution Services</label>
+                        </div>
+                    </div>
+                    <table id="myTable">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label for="frm">
+                                        <input type="checkbox" value="First Resources Management" name="chkbx[]"
+                                            onclick="myfun(event)" id="frm">
+                                        First Resources Management <span class="indicator indiex"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="pse">
+                                        <input type="checkbox" value="Philippine Stock Exchange" name="chkbx[]"
+                                            onclick="return myfun(event)" id="pse">
+                                        Philippine Stock Exchange <span class="indicator indibss"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="smfc">
+                                        <input type="checkbox" value="San Miguel Food Corp." name="chkbx[]"
+                                            onclick="return myfun(event)" id="smfc">
+                                        San Miguel Food Corp.
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="mhq">
+                                        <input type="checkbox" value="Mangga Head Quarters" name="chkbx[]"
+                                            onclick="return myfun(event)" id="mhq">
+                                        Mangga Head Quarters
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="kaakbay">
+                                        <input type="checkbox" value="Kaakbay" name="chkbx[]"
+                                            onclick="return myfun(event)" id="kaakbay">
+                                        Kaakbay
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="mnlcityhall">
+                                        <input type="checkbox" value="Youth Development and Welfare Bureau"
+                                            name="chkbx[]" onclick="return myfun(event)" id="mnlcityhall">
+                                        Youth Development and Welfare Bureau <span class="indicator indiasb"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="sginc">
+                                        <input type="checkbox" value="Seller Gateway Inc." name="chkbx[]"
+                                            onclick="return myfun(event)" id="sginc">
+                                        Seller Gateway Inc.
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="ranns">
+                                        <input type="checkbox" value="Rann-S" name="chkbx[]"
+                                            onclick="return myfun(event)" id="ranns">
+                                        Rann-S
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="everise">
+                                        <input type="checkbox" value="Everise" name="chkbx[]"
+                                            onclick="return myfun(event)" id="everise">
+                                        Everise
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="citem">
+                                        <input type="checkbox" value="Citem" name="chkbx[]"
+                                            onclick="return myfun(event)" id="citem">
+                                        Citem
+                                    </label>
+                                </td>
+                            </tr>
+
+
+
+
+                            <tr>
+                                <td>
+                                    <label for="dswd">
+                                        <input type="checkbox" value="Department of Social Welfare and Development"
+                                            name="chkbx[]" onclick="return myfun(event)" id="dswd">
+                                        Department of Social Welfare and Development
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+
+
+            <div class="column">
+                <form action="">
+                    <table id="selectedDataTable">
+                        <h2>Selected Exhibitor</h2>
+                        <tbody id="selectedData">
+                        </tbody>
+                    </table>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="boothAssignment.js"></script>
+</body>
+
+</html>
