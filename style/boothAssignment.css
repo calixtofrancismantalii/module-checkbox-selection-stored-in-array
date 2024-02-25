@@ -31,7 +31,7 @@ body {
 #form-wrapper form h2 {
   margin-bottom: 10px;
 }
-#form-wrapper form div #myInput {
+#form-wrapper form div #inputSearch {
   width: 100%;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
@@ -57,7 +57,7 @@ body {
 #form-wrapper form div div .indiasb {
   background-color: rgb(119, 175, 125);
 }
-#form-wrapper form #myTable {
+#form-wrapper form #exhibitorsTable {
   display: block;
   border-collapse: collapse;
   width: 100%;
@@ -66,60 +66,60 @@ body {
   overflow: auto;
   margin-top: 20px;
 }
-#form-wrapper form #myTable tbody {
+#form-wrapper form #exhibitorsTable tbody {
   width: 100%;
   height: auto;
   display: block;
 }
-#form-wrapper form #myTable tbody tr {
+#form-wrapper form #exhibitorsTable tbody tr {
   line-height: 14px;
   position: relative;
   display: block;
 }
-#form-wrapper form #myTable tbody tr td {
+#form-wrapper form #exhibitorsTable tbody tr td {
   display: block;
   border-bottom: 1px solid #ddd;
 }
-#form-wrapper form #myTable tbody tr td label {
+#form-wrapper form #exhibitorsTable tbody tr td label {
   display: block;
   padding: 15px;
   cursor: pointer;
 }
-#form-wrapper form #myTable tbody tr td label input[type=checkbox] {
+#form-wrapper form #exhibitorsTable tbody tr td label input[type=checkbox] {
   display: inline-block;
 }
-#form-wrapper form #myTable tbody tr td label .indicator {
+#form-wrapper form #exhibitorsTable tbody tr td label .indicator {
   width: 13px;
   height: 13px;
   right: 10px;
   position: absolute;
 }
-#form-wrapper form #myTable tbody tr td label .indiex {
+#form-wrapper form #exhibitorsTable tbody tr td label .indiex {
   background-color: rgb(175, 119, 119);
 }
-#form-wrapper form #myTable tbody tr td label .indibss {
+#form-wrapper form #exhibitorsTable tbody tr td label .indibss {
   background-color: rgb(131, 119, 175);
 }
-#form-wrapper form #myTable tbody tr td label .indiasb {
+#form-wrapper form #exhibitorsTable tbody tr td label .indiasb {
   background-color: rgb(119, 175, 125);
 }
-#form-wrapper form #myTable tbody tr {
+#form-wrapper form #exhibitorsTable tbody tr {
   display: none;
   /*Hide rows by default*/
 }
-#form-wrapper form #myTable tbody tr.visible {
+#form-wrapper form #exhibitorsTable tbody tr.visible {
   display: table-row;
   display: block;
   /* Show them when they match */
 }
-#form-wrapper form #myTable td {
+#form-wrapper form #exhibitorsTable td {
   text-align: left;
   display: block;
 }
-#form-wrapper form #myTable tr:hover {
+#form-wrapper form #exhibitorsTable tr:hover {
   background-color: #f1f1f1;
 }
-#form-wrapper form #myTable tbody {
+#form-wrapper form #exhibitorsTable tbody {
   height: 10px !important;
 }
 #form-wrapper form {

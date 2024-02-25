@@ -35,7 +35,7 @@ body {
 
     //seacrh exhitbitors
     div {
-      #myInput {
+      #inputSearch {
         width: 100%;
         font-size: 16px;
         padding: 12px 20px 12px 40px;
@@ -66,7 +66,7 @@ body {
       }
     }
 
-    #myTable {
+    #exhibitorsTable {
       display: block;
       border-collapse: collapse;
       width: 100%;
@@ -119,27 +119,27 @@ body {
       }
     }
 
-    #myTable tbody tr {
+    #exhibitorsTable tbody tr {
       display: none;
       /*Hide rows by default*/
     }
 
-    #myTable tbody tr.visible {
+    #exhibitorsTable tbody tr.visible {
       display: table-row;
       display: block;
       /* Show them when they match */
     }
 
-    #myTable td {
+    #exhibitorsTable td {
       text-align: left;
       display: block;
     }
 
-    #myTable tr:hover {
+    #exhibitorsTable tr:hover {
       background-color: #f1f1f1;
     }
 
-    #myTable tbody {
+    #exhibitorsTable tbody {
       height: 10px !important;
     }
     //table of selected exhibitors
