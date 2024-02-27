@@ -7,22 +7,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
     <div class="container">
         <div id="form-wrapper">
-            <div class="column">
+            <div class="col-sm-6">
                 <form>
-                    <h2>Exhibitor</h2>
-                    <div>
-                        <input type="text" id="inputSearch" placeholder="Search for Exhibitor" /><br>
+                    <label>Exhibitor</label>
+                    <div id="searchExhibitor">
+                        <input type="text" class="form-control" id="inputSearch" placeholder="Search for Exhibitor" />
                         <div>
-                            <span class="indicator indiex"></span> <label>Exhibitor</label>
-                            <span class="indicator indiasb"></span> <label>Existing Exhibitor</label>
-                            <span class="indicator indibss"></span> <label>Business Solution Services</label>
+                            <span class="label label-danger">Exhibitor</span>
+                            <span class="label label-success">Existing Exhibitor</span>
+                            <span class="label label-primary">Business Solution Services</span>
                         </div>
                     </div>
+
                     <table id="exhibitorsTable">
                         <tbody>
                             <tr>
@@ -30,7 +37,8 @@
                                     <label for="frm">
                                         <input class="checkbox" type="checkbox" value="First Resources Management"
                                             id="frm">
-                                        First Resources Management <span class="indicator indiex"></span>
+                                        First Resources Management <span
+                                            class="label label-danger indicator">Exhibitor</span>
                                     </label>
                                 </td>
                             </tr>
@@ -39,7 +47,8 @@
                                     <label for="pse">
                                         <input class="checkbox" type="checkbox" value="Philippine Stock Exchange"
                                             id="pse">
-                                        Philippine Stock Exchange <span class="indicator indibss"></span>
+                                        Philippine Stock Exchange <span class="label label-success indicator">Existing
+                                            Exhibitor</span>
                                     </label>
                                 </td>
                             </tr>
@@ -72,7 +81,8 @@
                                     <label for="mnlcityhall">
                                         <input class="checkbox" type="checkbox"
                                             value="Youth Development and Welfare Bureau" id="mnlcityhall">
-                                        Youth Development and Welfare Bureau <span class="indicator indiasb"></span>
+                                        Youth Development and Welfare Bureau <span
+                                            class="label label-primary indicator">Business Solution Services</span>
                                     </label>
                                 </td>
                             </tr>
@@ -119,12 +129,25 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <div id="exhibitorBoothNumber">
+                        <label>Booth Number</label>
+                        <select id="multiple" class="js-states form-control form-control-lg" multiple
+                            style="font-size: 16px;">
+                            <option>Both# 1</option>
+                            <option>Both# 2</option>
+                            <option>Both# 3</option>
+                            <option>Both# 4</option>
+                            <option>Both# 5</option>
+                        </select>
+                    </div>
+
                 </form>
             </div>
-            <div class="column">
+            <div class="col-sm-6">
                 <form action="">
                     <table id="selectedDataTable">
-                        <h2>Selected Exhibitor</h2>
+                        <label>Selected Exhibitor</label>
                         <tbody id="selectedExhibitors">
                         </tbody>
                     </table>
@@ -132,6 +155,19 @@
             </div>
         </div>
     </div>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Select2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+    <script>
+        $("#multiple").select2({
+            placeholder: "Select Booth Number",
+            allowClear: true,
+        });
+
+    </script>
+
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="boothAssignment.js"></script>

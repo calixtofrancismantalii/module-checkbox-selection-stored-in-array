@@ -11,11 +11,11 @@
 
 body {
   width: 100%;
-  background-color: #efeeee;
+  background-color: #f5f5f5 !important;
 }
 
 #form-wrapper {
-  display: flex;
+  flex-wrap: wrap;
 }
 #form-wrapper .column {
   width: 50%;
@@ -31,30 +31,33 @@ body {
 #form-wrapper form h2 {
   margin-bottom: 10px;
 }
-#form-wrapper form div #inputSearch {
+#form-wrapper form #searchExhibitor {
+  background-color: #e8e8e8;
+  padding: 10px;
+}
+#form-wrapper form #searchExhibitor #inputSearch {
   width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
+  border: solid 1px;
   margin-bottom: 10px; /* Safari/Chrome, other WebKit */ /* Firefox, other Gecko */
   box-sizing: border-box; /* Opera/IE 8+ */
 }
-#form-wrapper form div div {
-  display: flex;
+#form-wrapper form #searchExhibitor div {
   font-size: 13px;
 }
-#form-wrapper form div div .indicator {
+#form-wrapper form #searchExhibitor div .indicator {
   width: 13px;
   height: 13px;
   display: inline-block;
   margin: 0px 5px;
+  font-weight: normal !important;
 }
-#form-wrapper form div div .indiex {
+#form-wrapper form #searchExhibitor div .indiex {
   background-color: rgb(175, 119, 119);
 }
-#form-wrapper form div div .indibss {
+#form-wrapper form #searchExhibitor div .indibss {
   background-color: rgb(131, 119, 175);
 }
-#form-wrapper form div div .indiasb {
+#form-wrapper form #searchExhibitor div .indiasb {
   background-color: rgb(119, 175, 125);
 }
 #form-wrapper form #exhibitorsTable {
@@ -64,7 +67,7 @@ body {
   font-size: 18px;
   height: 400px !important;
   overflow: auto;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 #form-wrapper form #exhibitorsTable tbody {
   width: 100%;
@@ -75,8 +78,10 @@ body {
   line-height: 14px;
   position: relative;
   display: block;
+  background-color: white;
 }
 #form-wrapper form #exhibitorsTable tbody tr td {
+  text-align: left;
   display: block;
   border-bottom: 1px solid #ddd;
 }
@@ -84,14 +89,17 @@ body {
   display: block;
   padding: 15px;
   cursor: pointer;
+  font-weight: normal !important;
+  font-size: 15px;
 }
 #form-wrapper form #exhibitorsTable tbody tr td label input[type=checkbox] {
   display: inline-block;
 }
 #form-wrapper form #exhibitorsTable tbody tr td label .indicator {
-  width: 13px;
-  height: 13px;
+  font-size: 10px;
+  padding: 3px;
   right: 10px;
+  display: inline-block;
   position: absolute;
 }
 #form-wrapper form #exhibitorsTable tbody tr td label .indiex {
@@ -103,6 +111,9 @@ body {
 #form-wrapper form #exhibitorsTable tbody tr td label .indiasb {
   background-color: rgb(119, 175, 125);
 }
+#form-wrapper form #exhibitorsTable tbody tr:hover {
+  background-color: #f1f1f1;
+}
 #form-wrapper form #exhibitorsTable tbody tr {
   display: none;
   /*Hide rows by default*/
@@ -112,15 +123,9 @@ body {
   display: block;
   /* Show them when they match */
 }
-#form-wrapper form #exhibitorsTable td {
-  text-align: left;
-  display: block;
-}
-#form-wrapper form #exhibitorsTable tr:hover {
-  background-color: #f1f1f1;
-}
-#form-wrapper form #exhibitorsTable tbody {
-  height: 10px !important;
+#form-wrapper form #exhibitorBoothNumber {
+  background-color: #e8e8e8;
+  padding: 10px;
 }
 #form-wrapper form {
   padding: 10px;
@@ -140,9 +145,12 @@ body {
   padding: 5px;
 }
 #form-wrapper form #selectedDataTable tbody tr td {
-  background-color: #efeeee;
-  border: 1px solid #ddd;
-  padding: 5px 12px;
+  font-size: 14px;
+  color: #333333;
+  background-color: #e4e4e4;
+  border: 1px solid #aaaaaa;
+  border-radius: 6px;
+  padding: 4px 8px;
   display: inline-block;
   margin-right: 5px;
   margin-bottom: 5px;
