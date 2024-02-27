@@ -16,12 +16,12 @@
 </head>
 
 <body>
-    <div class="container">
-        <div id="form-wrapper">
-            <div class="col-sm-6">
-                <form>
-                    <label>Exhibitor</label>
-                    <div id="searchExhibitor">
+    <div class="container container-fluid">
+        <div id="form-wrapper" >
+            <form>
+                <div class="col-md-6">
+                    <div id="searchExhibitor" class="col-lg-12">
+                        <label>Exhibitor</label>
                         <input type="text" class="form-control" id="inputSearch" placeholder="Search for Exhibitor" />
                         <div>
                             <span class="label label-danger">Exhibitor</span>
@@ -29,8 +29,7 @@
                             <span class="label label-primary">Business Solution Services</span>
                         </div>
                     </div>
-
-                    <table id="exhibitorsTable">
+                    <table id="exhibitorsTable" class="col-lg-12">
                         <tbody>
                             <tr>
                                 <td>
@@ -129,11 +128,20 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
 
-                    <div id="exhibitorBoothNumber">
-                        <label>Booth Number</label>
-                        <select id="multiple" class="js-states form-control form-control-lg" multiple
-                            style="font-size: 16px;">
+                <div class="col-md-6">
+                    <table id="selectedDataTable">
+                        <label>Selected Exhibitor</label>
+                        <tbody id="selectedExhibitors">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-md-12">
+                    <div  id="exhibitorBoothNumber">
+                        <label>Booth Number</label><br>
+                        <select id="multiple" class="js-states form-control js-example-responsive"  style="width: 100%;" multiple style="font-size: 16px;">
                             <option>Both# 1</option>
                             <option>Both# 2</option>
                             <option>Both# 3</option>
@@ -141,20 +149,18 @@
                             <option>Both# 5</option>
                         </select>
                     </div>
-
-                </form>
-            </div>
-            <div class="col-sm-6">
-                <form action="">
-                    <table id="selectedDataTable">
-                        <label>Selected Exhibitor</label>
-                        <tbody id="selectedExhibitors">
-                        </tbody>
-                    </table>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
+
+
+
+
+
+
+
+
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Select2 -->
