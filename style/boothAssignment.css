@@ -26,6 +26,7 @@ body {
 }
 #form-wrapper form #searchExhibitor {
   padding: 0px;
+  margin-bottom: 10px;
 }
 #form-wrapper form #searchExhibitor #inputSearch {
   width: 100%;
@@ -57,7 +58,7 @@ body {
   border-collapse: collapse;
   width: 100%;
   font-size: 18px;
-  height: 400px !important;
+  height: 0px;
   overflow: auto;
   margin-bottom: 20px;
   padding: 0px;
@@ -123,12 +124,15 @@ body {
   padding: 10px;
 }
 #form-wrapper form #selectedDataTable {
-  border-collapse: collapse;
   width: 100%;
   font-size: 18px;
   display: block;
+  border-radius: 5px;
+  border: solid 1px #555555;
 }
-#form-wrapper form #selectedDataTable tbody {
+#form-wrapper form #selectedDataTable #selectedExhibitors {
+  border-radius: 5px;
+  border: solid 1px #555555;
   background-color: white;
   display: flex;
   flex-wrap: wrap;
@@ -136,7 +140,7 @@ body {
   border: 1px solid #ddd;
   padding: 5px;
 }
-#form-wrapper form #selectedDataTable tbody tr td {
+#form-wrapper form #selectedDataTable #selectedExhibitors tr td {
   font-size: 14px;
   color: #333333;
   background-color: #e4e4e4;

@@ -13,6 +13,12 @@ $(document).ready(function () {
     );
   }
 
+  //when input search is clicked
+  $("#inputSearch").click(function () {
+    $("#exhibitorsTable tbody tr").addClass("visible");
+    $("#exhibitorsTable").height("400px");
+  });
+
   // When typing or pasting text, perform a search function
   $input.addEventListener("input", performSearch);
 
@@ -28,8 +34,6 @@ $(document).ready(function () {
       }
       $$tr[i].classList[isMatch ? "add" : "remove"]("visible");
     }
-    // var showNoResultsMessage = resultCount === 0 && filter.length > 0;
-    // $noResults.classList[showNoResultsMessage ? "add" : "remove"]("visible");
   }
   // Creating a reusable function will allow us to make
   // changes to it only in one place
