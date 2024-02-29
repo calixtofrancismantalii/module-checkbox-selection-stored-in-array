@@ -20,15 +20,17 @@
         <div id="form-wrapper">
             <form>
                 <div class="col-md-6">
+                    <!-- input field -->
                     <div id="searchExhibitor" class="col-lg-12">
                         <label>Exhibitor</label>
                         <input type="text" class="form-control" id="inputSearch" placeholder="Search for Exhibitor" />
                         <div>
                             <span class="label label-danger">Exhibitor</span>
-                            <span class="label label-success">Existing Exhibitor</span>
+                            <span class="label label-success">Already assign to</span>
                             <span class="label label-primary">Business Solution Services</span>
                         </div>
                     </div>
+                    <!-- input field result -->
                     <table id="exhibitorsTable" class="col-lg-12">
                         <tbody>
                             <tr>
@@ -46,8 +48,8 @@
                                     <label for="pse">
                                         <input class="checkbox" type="checkbox" value="Philippine Stock Exchange"
                                             id="pse">
-                                        Philippine Stock Exchange <span class="label label-success indicator">Existing
-                                            Exhibitor</span>
+                                        Philippine Stock Exchange <span class="label label-success indicator">Already
+                                            assign to</span>
                                     </label>
                                 </td>
                             </tr>
@@ -131,6 +133,7 @@
                 </div>
 
                 <div class="col-md-6">
+                    <!-- table of selected result -->
                     <table id="selectedDataTable">
                         <label>Selected Exhibitor</label>
                         <tbody id="selectedExhibitors">
@@ -139,6 +142,7 @@
                 </div>
 
                 <div class="col-md-12">
+                    <!-- select exhibitors booth number - multiple select -->
                     <div id="exhibitorBoothNumber">
                         <label>Booth Number</label><br>
                         <select id="multiple" class="js-states form-control js-example-responsive" style="width: 100%;"
@@ -151,38 +155,19 @@
                         </select>
                     </div>
                 </div>
+
+                <div class="col-md-12 text-right">
+                    <!-- submit button -->
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
             </form>
         </div>
     </div>
-
-
-
-
-
-
-
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Select2 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-
-    <script>
-        $("#multiple").select2({
-            placeholder: "Select Booth Number",
-            allowClear: true,
-        });
-
-        $("#multiple").on("select2:open", function (e) {
-            // Clear the input search exhibitor
-            $("#inputSearch").val("");
-            $("#exhibitorsTable tbody tr").removeClass("visible");
-            $("#exhibitorsTable").height("0px");
-        });
-    </script>
-
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="boothAssignment.js"></script>
 </body>
 

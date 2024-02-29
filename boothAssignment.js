@@ -1,4 +1,16 @@
 $(document).ready(function () {
+  $("#multiple").select2({
+    placeholder: "Select Booth Number",
+    allowClear: true,
+  });
+
+  $("#multiple").on("select2:open", function (e) {
+    // Clear the input search exhibitor
+    $("#inputSearch").val("");
+    $("#exhibitorsTable tbody tr").removeClass("visible");
+    $("#exhibitorsTable").height("0px");
+  });
+
   let $input = document.getElementById("inputSearch");
   let $table = document.getElementById("exhibitorsTable");
 
@@ -22,7 +34,7 @@ $(document).ready(function () {
   // When typing or pasting text, perform a search function
   $input.addEventListener("input", performSearch);
 
-  //search function
+  //input search exhibittor function
   function performSearch() {
     var filter = normalizeStr(this.value),
       resultCount = 0;
@@ -78,4 +90,21 @@ $(document).ready(function () {
       newRow.appendTo(selectedExhibitors);
     });
   }
+
+  $("form").submit(function (e) {
+    const selectedBoothNumber = $("#multiple").select2("data");
+    e.preventDefault();
+    if (selectedOptions.length === 0 || selectedBoothNumber.length === 0) {
+      alert("Please fillup fields");
+    } else {
+      alert(
+        "Sucessfully submitted \n\n" +
+          "# of selected exhibitor: " +
+          selectedOptions.length +
+          "\n" +
+          "# of selected booth number: " +
+          selectedBoothNumber.length
+      );
+    }
+  });
 });

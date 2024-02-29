@@ -35,6 +35,7 @@ body {
   box-sizing: border-box; /* Opera/IE 8+ */
 }
 #form-wrapper form #searchExhibitor div {
+  margin-top: -10px;
   font-size: 13px;
 }
 #form-wrapper form #searchExhibitor div .indicator {
@@ -124,6 +125,7 @@ body {
   padding: 10px;
 }
 #form-wrapper form #selectedDataTable {
+  margin-bottom: 20px;
   width: 100%;
   font-size: 18px;
   display: block;
