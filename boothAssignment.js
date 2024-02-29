@@ -1,29 +1,9 @@
 $(document).ready(function () {
+  // select2 placeholder
   $("#multiple").select2({
     placeholder: "Select Booth Number",
     allowClear: true,
   });
-
-  $("#multiple").on("select2:open", function (e) {
-    // Clear the input search exhibitor
-    $("#inputSearch").val("");
-    $("#exhibitorsTable tbody tr").removeClass("visible");
-    $("#exhibitorsTable").height("0px");
-  });
-
-  let $input = document.getElementById("inputSearch");
-  let $table = document.getElementById("exhibitorsTable");
-
-  // Only select the <tr>s inside the <tbody> (double $ -> multiple elements)
-  let $$tr = $table.querySelectorAll("tbody tr");
-
-  // Add the normalized name as a property to each tr, so that you don't have
-  // to compute that every time when performing a search
-  for (var i = 0; i < $$tr.length; i++) {
-    $$tr[i].normalizedValue = normalizeStr(
-      $$tr[i].querySelector("td").innerText
-    );
-  }
 
   //when input search is clicked
   $("#inputSearch").click(function () {
@@ -31,10 +11,31 @@ $(document).ready(function () {
     $("#exhibitorsTable").height("400px");
   });
 
+  // clear input search exhibitor and close dropdown menu
+  $("#multiple").on("select2:open", function (e) {
+    $("#inputSearch").val("");
+    $("#exhibitorsTable tbody tr").removeClass("visible");
+    $("#exhibitorsTable").height("0px");
+  });
+
+  //global variables
+  let $input = document.getElementById("inputSearch");
+  let $table = document.getElementById("exhibitorsTable");
+  let $$tr = $table.querySelectorAll("tbody tr");
+  let selectedExhibitors = $("#selectedExhibitors");
+  let selectedOptions = [];
+
+  //normalized string on the table row match to search input
+  for (var i = 0; i < $$tr.length; i++) {
+    $$tr[i].normalizedValue = normalizeStr(
+      $$tr[i].querySelector("td").innerText
+    );
+  }
+
   // When typing or pasting text, perform a search function
   $input.addEventListener("input", performSearch);
 
-  //input search exhibittor function
+  //input search exhibitor function
   function performSearch() {
     var filter = normalizeStr(this.value),
       resultCount = 0;
@@ -47,15 +48,12 @@ $(document).ready(function () {
       $$tr[i].classList[isMatch ? "add" : "remove"]("visible");
     }
   }
-  // Creating a reusable function will allow us to make
-  // changes to it only in one place
+  //normalized input string match to table row
   function normalizeStr(str) {
     return str.toUpperCase().trim();
   }
 
-  const selectedExhibitors = $("#selectedExhibitors");
-  let selectedOptions = [];
-
+  //checked or unchecked result menu
   $(".checkbox").change(function () {
     const value = $(this).val();
     if ($(this).prop("checked")) {
@@ -69,7 +67,7 @@ $(document).ready(function () {
     updateTable();
   });
 
-  //update table of selected exhbitor whenever it clicks
+  //update selected exhbitor table
   function updateTable() {
     selectedExhibitors.empty();
     $.each(selectedOptions, function (index, option) {
@@ -91,6 +89,7 @@ $(document).ready(function () {
     });
   }
 
+  //form submission
   $("form").submit(function (e) {
     const selectedBoothNumber = $("#multiple").select2("data");
     e.preventDefault();
